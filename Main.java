@@ -23,6 +23,7 @@ public class Main {
 
         List<String> listRecruit = persons.stream()
                 .filter(person -> person.getAge() >= 18 && person.getAge() <= 27)
+                .filter(person -> person.getSex() == Sex.MAN)
                 .map(Person::getFamily)
                 .collect(Collectors.toList());
         System.out.println("Список призывников (фамилии): ");
